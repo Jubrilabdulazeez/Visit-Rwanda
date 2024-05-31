@@ -58,7 +58,37 @@ _selectedIndex = index;
                         child: const Center(child: Text('Row Item 1')),
                       ),
                     ),
-Container(
+                    Expanded(
+                      child: Container(
+                        color: Colors.green,
+                        height: 100,
+                        child: const Center(child: Text('Row Item 2')),
+                      ),
+                    ),
+                  ],
+                ),
+                Stack(
+                  children: [
+                    Image.asset('assets/image.jpg', width: 300, height: 200, fit: BoxFit.cover),
+                    const Positioned(
+                      bottom: 10,
+                      right: 10,
+                      child: Chip(
+                        label: Text('Stacked Chip'),
+                        backgroundColor: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      child: const Center(child: Text('Grid Item 1')),
+                    ),
+                  Container(
                       color: Colors.yellow,
                       child: const Center(child: Text('Grid Item 2')),
                     ),
